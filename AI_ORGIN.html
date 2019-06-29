@@ -1,0 +1,104 @@
+<html>
+<center>
+	<img src="AI_ORGIN_LOGO.png" width="210px">
+	<div id="chatshow">
+ 	 <div id="bot">AI: Hello human.</div>
+	</br>
+	</div>
+	</br>
+	<input placeholder="Type Here" id="usertextbox">
+	<button onclick="chat()">Say</button>
+</html>
+
+<style>
+	@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+	#user {
+	  float:right;
+	  margin-bottom:25px;
+	  width:60%;
+	  padding-top:5px;
+	  padding-bottom:5px;
+	  padding-left:5px;
+	  padding-right:5px;
+	  background-color: #70ea34;
+	}
+
+	#bot {
+	  float:left;
+	  width:60%;
+	  margin-bottom:25px;
+	  background-color:#eadc36;
+	  padding-left:5px;
+	  padding-right:5px;
+	  padding-top:5px;
+	  padding-bottom:5px;
+	}
+
+	#chatshow {
+	height: 65%;
+	width: 65% ;
+	border-style:solid;
+	border-width: 5 px;
+	padding-top: 10px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	font-size: 20px;
+	background-color:#485fea;
+	font-family: "Roboto Condensed";
+	overflow:auto;
+	}
+
+	input {
+	  font-family:Roboto Condensed;
+	  color: #000;
+	  font-size:25px;
+	  width:65.9%;
+	  background-color: #fff;
+	  border: solid #000;
+	  outline: none;
+	}
+
+	button {
+	  font-family:Roboto Condensed;
+	  font-size:25px;
+	}
+	
+	h1 {
+		font-family: Roboto Condensed;
+		font-size: 30px;
+	}
+	button {
+		background-color: #ea622c;
+		color: #000;
+		border: solid #000;
+	}
+</style>
+
+<script>
+	
+response = ["Dude, can we talk about lifting please.", "Bro you sound like a Timmy.", "Sorry to change the subject but can you go get me some protien powder? I'm almost out.", "What? Sorry I was texting this fine piece of hardware.", "Haha. I met this iPhone chick and she was super hot.", "I'm sorry but you are super cute. Can I get your number?", "I'm sorry but what is 2 + 2?", "Is that a new shirt?"];
+	function chat() {
+	  var usersay = document.getElementById("usertextbox").value.toLowerCase();
+	  usersay = usersay.replace(/\s/g, "").replace(/[^\w\s]|_/g, "");
+
+	  if ((usersay == "hey") | (usersay == "hello") | (usersay == "hi")) {
+	    var bottxt = "how was your day?";
+	  } else {
+		  var bottxt = response[Math.floor(Math.random()*response.length)];
+	  }
+
+	  var botwrite = "</br><div id='bot'>" + "AI: " + bottxt + "</div>";
+	  var usertxt =
+	    "</br><div id='user'>" +
+	    "User: " +
+	    document.getElementById("usertextbox").value +
+	    "</div>";
+	  var chattxt = document.getElementById("chatshow").innerHTML;
+	  var write = chattxt + " " + usertxt + " " + botwrite;
+	  document.getElementById("chatshow").innerHTML = write;
+	  document.getElementById("usertextbox").value = "";
+	}
+	
+</script>
