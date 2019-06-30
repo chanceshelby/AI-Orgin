@@ -13,4 +13,4 @@ If you have any questions or want to help out send me an eamil.
 
 P.S. Only use code for knowledge purposes as I have the source copyrighted. Thank you.
 
-chanceshelby17@gmai.com
+chanceshelby17@gmail.com
