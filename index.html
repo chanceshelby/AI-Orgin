@@ -81,27 +81,38 @@
 
 <script>
 
-response = ["dude, can we talk about lifting please.", "bro you sound like a timmy.", "sorry to change the subject but can you go get me some protien powder? i'm almost out.", "what? sorry i was texting this fine piece of hardware.", "haha. i met this iphone chick and she was super hot.", "i'm sorry but you are super cute. can i get your number?", "i'm sorry but what is 2 + 2?", "is that a new shirt?", "what is your name?", "do you lov me? sorry... i probably sound so stupid right now.", "maybe.", "sounds like a plan!", "please, don't tell my mom.", "my dad will sue.", "maybe next time.", "nice try moron.", "F.", "missin' you - trey songz.", "when is the last time you showered?", "No response.", "by the way, my pants are down.", "What if I told you today was your last day?"];
+var num1 = 2;
+var num2 = 3;
+var sum = num1 + num2;
+
+response = ["dude, can we talk about lifting please.", "bro you sound like a timmy.", "sorry to change the subject but can you go get me some protien powder? i'm almost out.", "what? sorry i was texting this fine piece of hardware.", "haha. i met this iphone chick and she was super hot.", "i'm sorry but you are super cute. can i get your number?", "i'm sorry but what is 2 + 2?", "is that a new shirt?", "what is your name?", "do you lov me? sorry... i probably sound so stupid right now.", "maybe.", "sounds like a plan!", "please, don't tell my mom.", "my dad will sue.", "maybe next time.", "nice try moron.", "missin' you - trey songz.", "when is the last time you showered?", "no response.", "by the way, my pants are down.", "what if i told you today was your last day?"];
+
 	function chat() {
 	  var usersay = document.getElementById("usertextbox").value.toLowerCase();
 	  usersay = usersay.replace(/\s/g, " ").replace(/[^\w\s]|_/g, " ");
 
 	  if ((usersay == "hey") | (usersay == "hello") | (usersay == "hi")) {
 	    var bottxt = "how was your day?";
-	  }
-		else if ((usersay == "what is the meaning of life?") | (usersay == "whats the meaning of life?") | (usersay == "what's the meaning of life?") | (usersay == "what is the meaning of life") | (usersay == "whats the meaning of life") | (usersay == "what's the meaning of life")) {
-			var bottxt = "Ask me in 100 years.";
 		}
-		else if ((usersay == "party at my place") | (usersay == "") | (usersay == "")) {
-			var	bottxt = "sick, i'll let my dogs know.";
+		else if ((usersay == "good") | (usersay == "really good") | (usersay == "awesome") | (usersay == "fantastic")) {
+		  var bottxt = "i am glad to hear that.";
 		}
-		else if ((usersay == "what's your favorite song out right now?") | (usersay == "whats ur fave song?") | (usersay == "what is your favorite song")) {
-			var bottxt = "she's country by jason aldean";
-		}
-		else if ((usersay == "what is 2 + 2")) {
-			var bottxt = "4";
+		else if ((usersay == "bad") | (usersay == "alright") | (usersay == "sucky") | (usersay == "really bad") | (usersay == "horrible")) {
+			var bottxt = "well at least you are human.";
 		} else {
 			var bottxt = response[Math.floor(Math.random()*response.length)];
+		}
+		if ((usersay == "calc") | (usersay == "calculator")) {
+			var	bottxt = "enter first number";
+		}
+		else if ((usersay == num1)) {
+			var bottxt = "enter second number";
+		}
+		else if ((usersay == num2)) {
+			var botxt = sum.toString();
+		}
+		else if ((usersay == "what is the meaning of life?") | (usersay == "whats the meaning of life?") | (usersay == "what's the meaning of life?") | (usersay == "what is the meaning of life") | (usersay == "whats the meaning of life") | (usersay == "what's the meaning of life")) {
+			var bottxt = "Ask me again in 7.4 million years.";
 		}
 
 	  var botwrite = "</br><div id='bot'>" + "AI: " + bottxt + "</div>";
