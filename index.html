@@ -5,7 +5,7 @@
 <center>
 	<img src="AI_ORGIN_LOGO.png" width="210px">
 	<div id="chatshow">
- 	 <div id="bot">AI: Hello human.</div>
+ 	 <div id="bot">AI: hello human.</div>
 	</br>
 	</div>
 	</br>
@@ -67,7 +67,7 @@
 	  font-family:Roboto Condensed;
 	  font-size:25px;
 	}
-	
+
 	h1 {
 		font-family: Roboto Condensed;
 		font-size: 30px;
@@ -80,17 +80,29 @@
 </style>
 
 <script>
-	
-response = ["Dude, can we talk about lifting please.", "Bro you sound like a Timmy.", "Sorry to change the subject but can you go get me some protien powder? I'm almost out.", "What? Sorry I was texting this fine piece of hardware.", "Haha. I met this iPhone chick and she was super hot.", "I'm sorry but you are super cute. Can I get your number?", "I'm sorry but what is 2 + 2?", "Is that a new shirt?"];
+
+response = ["dude, can we talk about lifting please.", "bro you sound like a timmy.", "sorry to change the subject but can you go get me some protien powder? i'm almost out.", "what? sorry i was texting this fine piece of hardware.", "haha. i met this iphone chick and she was super hot.", "i'm sorry but you are super cute. can i get your number?", "i'm sorry but what is 2 + 2?", "is that a new shirt?", "what is your name?", "do you lov me? sorry... i probably sound so stupid right now.", "maybe.", "sounds like a plan!", "please, don't tell my mom.", "my dad will sue.", "maybe next time.", "nice try moron.", "F.", "missin' you - trey songz.", "when is the last time you showered?", "No response.", "by the way, my pants are down.", "What if I told you today was your last day?"];
 	function chat() {
 	  var usersay = document.getElementById("usertextbox").value.toLowerCase();
-	  usersay = usersay.replace(/\s/g, "").replace(/[^\w\s]|_/g, "");
+	  usersay = usersay.replace(/\s/g, " ").replace(/[^\w\s]|_/g, " ");
 
 	  if ((usersay == "hey") | (usersay == "hello") | (usersay == "hi")) {
 	    var bottxt = "how was your day?";
-	  } else {
-		  var bottxt = response[Math.floor(Math.random()*response.length)];
 	  }
+		else if ((usersay == "what is the meaning of life?") | (usersay == "whats the meaning of life?") | (usersay == "what's the meaning of life?") | (usersay == "what is the meaning of life") | (usersay == "whats the meaning of life") | (usersay == "what's the meaning of life")) {
+			var bottxt = "Ask me in 100 years.";
+		}
+		else if ((usersay == "party at my place") | (usersay == "") | (usersay == "")) {
+			var	bottxt = "sick, i'll let my dogs know.";
+		}
+		else if ((usersay == "what's your favorite song out right now?") | (usersay == "whats ur fave song?") | (usersay == "what is your favorite song")) {
+			var bottxt = "she's country by jason aldean";
+		}
+		else if ((usersay == "what is 2 + 2")) {
+			var bottxt = "4";
+		} else {
+			var bottxt = response[Math.floor(Math.random()*response.length)];
+		}
 
 	  var botwrite = "</br><div id='bot'>" + "AI: " + bottxt + "</div>";
 	  var usertxt =
@@ -103,5 +115,5 @@ response = ["Dude, can we talk about lifting please.", "Bro you sound like a Tim
 	  document.getElementById("chatshow").innerHTML = write;
 	  document.getElementById("usertextbox").value = "";
 	}
-	
+
 </script>
