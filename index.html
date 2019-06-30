@@ -1,12 +1,10 @@
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<br>
 <html>
 <center>
 	<img src="AI_ORGIN_LOGO.png" width="210px">
 	<div id="chatshow">
  	 <div id="bot">AI: hello human.</div>
-	</br>
 	</div>
 	</br>
 	<input placeholder="Type Here" id="usertextbox">
@@ -17,40 +15,41 @@
 	@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
 
 	#user {
-	  float:right;
-	  margin-bottom:25px;
-	  width:60%;
+	  width:30%;
 	  padding-top:5px;
 	  padding-bottom:5px;
 	  padding-left:5px;
 	  padding-right:5px;
-	  background-color: #70ea34;
+	  background-color: #ffffff;
+		color: #242424;
+		margin-left:160px;margin-right:60
 	}
 
 	#bot {
-	  float:left;
-	  width:60%;
-	  margin-bottom:25px;
-	  background-color:#eadc36;
+	  width:30%;
+	  background-color:#242424;
 	  padding-left:5px;
 	  padding-right:5px;
 	  padding-top:5px;
 	  padding-bottom:5px;
+		color:#ffffff;
+		margin-left:160px;margin-right:60px
 	}
 
 	#chatshow {
-	height: 65%;
-	width: 65% ;
-	border-style:solid;
-	border-width: 5 px;
+	float: right;
+	height: 80%;
+	width: 80%;
 	padding-top: 10px;
 	padding-right: 30px;
 	padding-bottom: 10px;
 	padding-left: 30px;
 	font-size: 20px;
-	background-color:#485fea;
 	font-family: "Roboto Condensed";
 	overflow:auto;
+	background-image: url("AI_Orgin_Bot.png");
+	background-repeat: no-repeat;
+  background-size: 40% 100%;
 	}
 
 	input {
@@ -67,25 +66,19 @@
 	  font-family:Roboto Condensed;
 	  font-size:25px;
 	}
-
-	h1 {
-		font-family: Roboto Condensed;
-		font-size: 30px;
-	}
 	button {
 		background-color: #ea622c;
 		color: #000;
 		border: solid #000;
 	}
+	body {
+		background-color: #dcdddf;
+	}
 </style>
 
 <script>
 
-var num1 = 2;
-var num2 = 3;
-var sum = num1 + num2;
-
-response = ["dude, can we talk about lifting please.", "bro you sound like a timmy.", "sorry to change the subject but can you go get me some protien powder? i'm almost out.", "what? sorry i was texting this fine piece of hardware.", "haha. i met this iphone chick and she was super hot.", "i'm sorry but you are super cute. can i get your number?", "i'm sorry but what is 2 + 2?", "is that a new shirt?", "what is your name?", "do you lov me? sorry... i probably sound so stupid right now.", "maybe.", "sounds like a plan!", "please, don't tell my mom.", "my dad will sue.", "maybe next time.", "nice try moron.", "missin' you - trey songz.", "when is the last time you showered?", "no response.", "by the way, my pants are down.", "what if i told you today was your last day?"];
+response = ["dude, can we talk about lifting please.", "bro you sound like a timmy.", "sorry to change the subject but can you go get me some protien powder? i'm almost out.", "what? sorry i was texting this fine piece of hardware.", "haha. i met this iphone chick and she was super hot.", "i'm sorry but you are super cute. can i get your number?", "i'm sorry but what is 2 + 2?", "is that a new shirt?", "what is your name?", "do you lov me? sorry... i probably sound so stupid right now.", "maybe.", "sounds like a plan!", "please, don't tell my mom.", "my dad will sue.", "maybe next time.", "nice try moron.", "when is the last time you showered?", "no response.", "by the way, my pants are down.", "what if i told you today was your last day?", "i have to poop."];
 
 	function chat() {
 	  var usersay = document.getElementById("usertextbox").value.toLowerCase();
@@ -102,14 +95,11 @@ response = ["dude, can we talk about lifting please.", "bro you sound like a tim
 		} else {
 			var bottxt = response[Math.floor(Math.random()*response.length)];
 		}
-		if ((usersay == "calc") | (usersay == "calculator")) {
-			var	bottxt = "enter first number";
+		if ((usersay == "thank you") | (usersay == "thanks")) {
+			var	bottxt = "you are welcome.";
 		}
-		else if ((usersay == num1)) {
-			var bottxt = "enter second number";
-		}
-		else if ((usersay == num2)) {
-			var botxt = sum.toString();
+		if ((usersay == "yeah") | (usersay == "yeah i guess")) {
+			var	bottxt = "i promise i am here for you.";
 		}
 		else if ((usersay == "what is the meaning of life?") | (usersay == "whats the meaning of life?") | (usersay == "what's the meaning of life?") | (usersay == "what is the meaning of life") | (usersay == "whats the meaning of life") | (usersay == "what's the meaning of life")) {
 			var bottxt = "Ask me again in 7.4 million years.";
