@@ -11,6 +11,6 @@ PROBLEMS:
 This will be a bot that will learn as you talk to it. As of now it knows only what I have programmed it to say but the project is not finished.
 If you have any questions or want to help out send me an eamil.
 
-P.S. Only use code for knowledge purposes as I have the source copyrighted. Thank you.
+P.S. Only use code for knowledge purposes as I have the source trademarked. Thank you.
 
 chanceshelby17@gmail.com
